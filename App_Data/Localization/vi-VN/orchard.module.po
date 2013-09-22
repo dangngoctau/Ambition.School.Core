@@ -1,0 +1,183 @@
+﻿#: "Ambition.School.Core.ViewModels.DepartmentCreateViewModel"
+#| msgid "Parent Department"
+msgctxt "Ambition.School.Core.ViewModels.DepartmentCreateViewModel"
+msgid "Parent Department"
+msgstr "Phòng ban cấp trên"
+
+#: "Ambition.School.Core.ViewModels.DepartmentCreateViewModel"
+#| msgid "Name"
+msgctxt "Ambition.School.Core.ViewModels.DepartmentCreateViewModel"
+msgid "Name"
+msgstr "Tên phòng ban"
+
+#: ~/Modules/Ambition.School.Core/Views/DepartmentAdmin/CreateDepartment.cshtml
+#| msgid "Available Positions"
+msgctxt "~/Modules/Ambition.School.Core/Views/DepartmentAdmin/CreateDepartment.cshtml"
+msgid "Available Positions"
+msgstr "Danh sách phòng ban"
+
+#: ~/Modules/Ambition.School.Core/Views/DepartmentAdmin/CreateDepartment.cshtml
+#| msgid "Save"
+msgctxt "~/Modules/Ambition.School.Core/Views/DepartmentAdmin/CreateDepartment.cshtml"
+msgid "Save"
+msgstr "Lưu"
+
+#: ~/Modules/Ambition.School.Core/Views/DepartmentAdmin/CreateDepartment.cshtml
+#| msgid "Create Department Information"
+msgctxt "~/Modules/Ambition.School.Core/Views/DepartmentAdmin/CreateDepartment.cshtml"
+msgid "Create Department Information"
+msgstr "Thêm thông tin phòng ban"
+
+#: ~/Modules/Ambition.School.Core/Views/DepartmentAdmin/CreateDepartment.cshtml
+#| msgid "Choose"
+msgctxt "~/Modules/Ambition.School.Core/Views/DepartmentAdmin/CreateDepartment.cshtml"
+msgid "Choose"
+msgstr "Chọn"
+
+#: "Ambition.School.Core.Controllers.DepartmentAdminController"
+#| msgid "The position information has been created."
+msgctxt "Ambition.School.Core.Controllers.DepartmentAdminController"
+msgid "The position information has been created."
+msgstr "Thông tin vị trí đã được tạo."
+
+#: "Ambition.School.Core.Controllers.DepartmentAdminController"
+#| msgid "The department information has been created."
+msgctxt "Ambition.School.Core.Controllers.DepartmentAdminController"
+msgid "The department information has been created."
+msgstr "Thông tin phòng ban đã được tạo."
+
+#: "Ambition.School.Core.Controllers.DepartmentAdminController"
+#| msgid "The department information has been updated."
+msgctxt "Ambition.School.Core.Controllers.DepartmentAdminController"
+msgid "The department information has been updated."
+msgstr "Thông tin phòng ban đã được cập nhật."
+
+#: ~/Modules/Ambition.School.Core/Views/DepartmentAdmin/EditDepartment.cshtml
+#| msgid "Edit Department Information"
+msgctxt "~/Modules/Ambition.School.Core/Views/DepartmentAdmin/EditDepartment.cshtml"
+msgid "Edit Department Information"
+msgstr "Cập nhật thông tin phòng ban"
+
+#: ~/Modules/Ambition.School.Core/Views/DepartmentAdmin/EditDepartment.cshtml
+#| msgid "Choose"
+msgctxt "~/Modules/Ambition.School.Core/Views/DepartmentAdmin/EditDepartment.cshtml"
+msgid "Choose"
+msgstr "Chọn"
+
+#: ~/Modules/Ambition.School.Core/Views/DepartmentAdmin/EditDepartment.cshtml
+#| msgid "Save"
+msgctxt "~/Modules/Ambition.School.Core/Views/DepartmentAdmin/EditDepartment.cshtml"
+msgid "Save"
+msgstr "Lưu"
+
+#: ~/Modules/Ambition.School.Core/Views/DepartmentAdmin/EditDepartment.cshtml
+#| msgid "Available Positions"
+msgctxt "~/Modules/Ambition.School.Core/Views/DepartmentAdmin/EditDepartment.cshtml"
+msgid "Available Positions"
+msgstr "Danh sách phòng ban"
+
+#: "Ambition.School.Core.Models.MemberPart"
+#| msgid "FullName"
+msgctxt "Ambition.School.Core.Models.MemberPart"
+msgid "FullName"
+msgstr "Họ tên đầy đủ"
+
+#: "Ambition.School.Core.Models.MemberPart"
+#| msgid "FirstName"
+msgctxt "Ambition.School.Core.Models.MemberPart"
+msgid "FirstName"
+msgstr "Tên"
+
+#: "Ambition.School.Core.Models.MemberPart"
+#| msgid "LastName"
+msgctxt "Ambition.School.Core.Models.MemberPart"
+msgid "LastName"
+msgstr "Họ"
+
+#: "Ambition.School.Core.Models.MemberPart"
+#| msgid "Birthday"
+msgctxt "Ambition.School.Core.Models.MemberPart"
+msgid "Birthday"
+msgstr "Ngày sinh"
+
+#: "Ambition.School.Core.Models.MemberPart"
+#| msgid "Address"
+msgctxt "Ambition.School.Core.Models.MemberPart"
+msgid "Address"
+msgstr "Địa chỉ"
+
+#: "Ambition.School.Core.ViewModels.UserCreateViewModel"
+#| msgid "Email"
+msgctxt "Ambition.School.Core.ViewModels.UserCreateViewModel"
+msgid "Email"
+msgstr "Email"
+
+#: "Ambition.School.Core.ViewModels.UserCreateViewModel"
+#| msgid "Password"
+msgctxt "Ambition.School.Core.ViewModels.UserCreateViewModel"
+msgid "Password"
+msgstr "Mật khẩu"
+
+#: "Ambition.School.Core.ViewModels.UserCreateViewModel"
+#| msgid "ConfirmPassword"
+msgctxt "Ambition.School.Core.ViewModels.UserCreateViewModel"
+msgid "ConfirmPassword"
+msgstr "Nhập lại mật khẩu"
+
+#: "Ambition.School.Core.Models.TeacherPart"
+#| msgid "PositionsDepartments"
+msgctxt "Ambition.School.Core.Models.TeacherPart"
+msgid "PositionsDepartments"
+msgstr "Chức vụ"
+
+msgctxt "Ambition.School.Core.Drivers.MemberPartDriver"
+msgid "You must specify a valid email address."
+msgstr "Vui lòng chọn một email hợp lệ."
+
+msgctxt "Ambition.School.Core.Drivers.MemberPartDriver"
+msgid "Password confirmation must match."
+msgstr "Hai mật khẩu phải khớp nhau."
+
+msgctxt "Ambition.School.Core.Drivers.MemberPartDriver"
+msgid "User with that email already exists."
+msgstr "Email đã tồn tại."
+
+msgctxt "Ambition.School.Core.Drivers.TeacherPartDriver"
+msgid "Please choose positions which this teacher belongs to."
+msgstr "Vui lòng chọn chức vụ cho thành viên."
+
+msgctxt "Ambition.School.Core.Drivers.TeacherPartDriver"
+msgid "Tempar data."
+msgstr "Dữ liệu đã bị thay đổi."
+
+msgctxt "Ambition.School.Core.Drivers.TeacherPartDriver"
+msgid "Invalid contents in string."
+msgstr "Dữ liệu nhập không hợp lệ."
+
+#: ~/Modules/Ambition.School.Core/Views/EditorTemplates/Parts.Member.cshtml
+#| msgid "Personal Information"
+msgctxt "~/Modules/Ambition.School.Core/Views/EditorTemplates/Parts.Member.cshtml"
+msgid "Personal Information"
+msgstr "Thông tin cá nhân"
+
+#: ~/Modules/Ambition.School.Core/Views/EditorTemplates/Parts.Teacher.cshtml
+#| msgid "Department Information"
+msgctxt "~/Modules/Ambition.School.Core/Views/EditorTemplates/Parts.Teacher.cshtml"
+msgid "Department Information"
+msgstr "Thông tin phòng ban"
+
+#: ~/Modules/Ambition.School.Core/Views/EditorTemplates/Parts.Teacher.cshtml
+#| msgid "Choose..."
+msgctxt "~/Modules/Ambition.School.Core/Views/EditorTemplates/Parts.Teacher.cshtml"
+msgid "Choose..."
+msgstr "Chọn..."
+
+#: ~/Modules/Ambition.School.Core/Views/EditorTemplates/Parts.Teacher.cshtml
+#| msgid "Selected"
+msgctxt "~/Modules/Ambition.School.Core/Views/EditorTemplates/Parts.Teacher.cshtml"
+msgid "Selected"
+msgstr "Đã chọn"
+
+msgctxt "~/Modules/Ambition.School.Core/Views/EditorTemplates/Parts.User.Create.cshtml"
+msgid "LogOn Information"
+msgstr "Thông tin đăng nhập"

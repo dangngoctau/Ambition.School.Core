@@ -1,0 +1,30 @@
+﻿@model Ambition.School.Core.ViewModels.DepartmentCreateViewModel
+@{
+    Layout.Title = T("Create Department Information");
+    var i = 0;
+}
+
+@using (Html.BeginFormAntiForgeryPost())
+{
+    @Html.ValidationSummary()
+    <fieldset>
+        @Html.LabelFor(c => c.Name)
+        @Html.TextBoxFor(c => c.Name, new { @class = "large text" })
+    </fieldset>
+    <fieldset>
+        @Html.LabelFor(c => c.ParentDepartmentId)
+        @Html.DropDownListFor(c => c.ParentDepartmentId, new SelectList(Model.AvailableDepartments, "Id", "Name"), T("Choose").ToString())
+    </fieldset>
+    <fieldset>
+        @Html.LabelFor(c => c.AvailablePositions, T("Available Positions"))
+        @foreach (var item in Model.AvailablePositions)
+        {
+            <p>
+                @Html.Hidden("AvailablePositions[" + i + "].Id", item.Id)
+                @Html.CheckBox("AvailablePositions[" + i + "].IsSelected", item.IsSelected) @item.Name
+            </p>
+            i++;
+        }
+    </fieldset>
+    <button type="submit">@T("Save")</button>
+}

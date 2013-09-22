@@ -1,0 +1,17 @@
+﻿@{
+    Layout.Title = T("List Teacher");
+}
+<div class="manage">
+    <a href="#">Place holder.</a>
+</div>
+@using (Html.BeginFormAntiForgeryPost()) {
+    if ((int) Model.ContentItems.Items.Count == 0) {
+        <div class="message info">@T("There are no content items.")</div>
+    }
+    else {
+        <fieldset class="contentItems bulk-items">
+            @Display(Model.ContentItems)
+        </fieldset>
+    }
+    @Display(Model.Pager)
+}

@@ -1,0 +1,46 @@
+﻿@model Ambition.School.Core.Models.ArticlePermissionPart
+@{
+    Script.Require("jQuery");
+    Script.Include("knockout.js");
+    Script.Include("json2.js");
+    Script.Include("articlepermisson.admin.js");
+    Script.Include("underscore.min.js");
+    Script.Include("underscore.string.min.js");
+    Style.Include("ambition.admin.css");
+}
+
+<fieldset id="article-permssion" data-isenabled="@Model.IsEnabled" data-permission="@Model.Permissions">
+    @Html.HiddenFor(c => c.Permissions, new { @data_bind = "value: postData" })
+    <p>
+        @Html.CheckBoxFor(c => c.IsEnabled, new { @data_bind = "checked: isEnabled" }) @T("Enable Permssion")
+    </p>
+    <div>
+        <div>
+            <select data-bind="options: departments, value: chosenDepartment, optionsText: 'name', optionsCaption: '@T("Choose...").Text'"></select>
+        </div>
+        <table style="width: 100%">
+            <tr>
+                <td class="col-5">&nbsp;</td>
+                <td class="col-5">@T("Selected")</td>
+            </tr>
+            <tr>
+                <td data-bind="foreach: chosenDepartment.safe().positions">
+                    <p>
+                        <input type="checkbox" data-bind="checked: selected" />
+                        <span data-bind="text: positionName"></span>
+                    </p>
+                </td>
+                <td data-bind="foreach: selectedDepartments()">
+                    <ul id="selected-positions">
+                        <li><span data-bind="text: $index() + 1"></span>. <b data-bind="text: name"></b>
+                            <ul data-bind="foreach: positions">
+                                <li><span data-bind="text: $index() + 1"></span>. <span data-bind="text: positionName"></span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+</fieldset>
+

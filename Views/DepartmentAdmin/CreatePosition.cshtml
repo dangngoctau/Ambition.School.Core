@@ -1,0 +1,18 @@
+﻿@model Ambition.School.Core.ViewModels.PositionCreateViewModel
+@{
+    Layout.Title = T("Create New Position");
+}
+
+@using (Html.BeginFormAntiForgeryPost())
+{
+    @Html.ValidationSummary()
+    <fieldset>
+        @Html.LabelFor(c => c.Name)
+        @Html.EditorFor(c => c.Name)
+    </fieldset>
+    <fieldset>
+        @Html.LabelFor(c => c.DisplayOrder)
+        @Html.EditorFor(c => c.DisplayOrder)
+    </fieldset>
+    <button type="submit">@T("Save")</button>
+}

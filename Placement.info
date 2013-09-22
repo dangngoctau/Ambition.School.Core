@@ -1,0 +1,7 @@
+﻿<Placement>
+  <Place Parts_Member_Edit="Content:2"/>
+  <Place Parts_Member_User_Edit="Content:1"/>
+  <Place Parts_Member_User_Create="Content:1"/>
+  <Place Parts_ArticlePermission_Edit="Content:2"/>
+  <Place Parts_Teacher_Edit="Content:3"/>
+</Placement>

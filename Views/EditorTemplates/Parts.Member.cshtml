@@ -1,0 +1,25 @@
+﻿@model Ambition.School.Core.Models.MemberPart
+<fieldset>
+    <legend>@T("Personal Information")</legend>
+    <div>
+        @Html.LabelFor(c => c.FullName)
+        @Html.TextBoxFor(c => c.FullName, new { @class = "textMedium text" })
+    </div>
+    <div>
+        @Html.LabelFor(c => c.FirstName)
+        @Html.TextBoxFor(c => c.FirstName, new { @class = "textMedium text" })
+    </div>
+    <div>
+        @Html.LabelFor(c => c.LastName)
+        @Html.TextBoxFor(c => c.LastName, new { @class = "textMedium text" })
+    </div>
+    <div>
+        @Html.LabelFor(c => c.Address)
+        @Html.TextBoxFor(c => c.Address, new { @class = "textMedium text" })
+    </div>
+    <div>
+        @Html.LabelFor(c => c.Birthday)
+        @Html.EditorFor(c => c.Birthday, new { @class = "textMedium text" })
+    </div>
+</fieldset>
+

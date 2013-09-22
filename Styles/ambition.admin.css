@@ -1,0 +1,11 @@
+﻿.col-5 {
+    width: 50%;
+}
+
+.selected-positions {
+    margin-left: 40px;
+}
+
+ul#selected-positions li ul {
+    margin-left: 40px;
+}

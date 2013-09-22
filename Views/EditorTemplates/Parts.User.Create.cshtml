@@ -1,0 +1,17 @@
+﻿@model Ambition.School.Core.ViewModels.UserCreateViewModel
+<fieldset>
+    <legend>@T("LogOn Information")</legend>
+    <div>
+        @Html.LabelFor(c => c.Email)
+        @Html.TextBoxFor(c => c.Email, new { @class = "textMedium text" })
+    </div>
+    <div>
+        @Html.LabelFor(c => c.Password)
+        @Html.PasswordFor(c => c.Password, new { @class = "textMedium text" })
+    </div>
+    <div>
+        @Html.LabelFor(c => c.ConfirmPassword)
+        @Html.PasswordFor(c => c.ConfirmPassword, new { @class = "textMedium text" })
+    </div>
+</fieldset>
+

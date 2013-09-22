@@ -1,0 +1,41 @@
+﻿@model Ambition.School.Core.Models.TeacherPart
+@{
+    Script.Require("jQuery");
+    Script.Include("knockout.js");
+    Script.Include("json2.js");
+    Script.Include("department.base.js");
+    Script.Include("createteacher.admin.js");
+    Script.Include("underscore.min.js");
+    Script.Include("underscore.string.min.js");
+    Style.Include("ambition.admin.css");
+}
+<fieldset id="teacher-positions" data-positions="@Model.PositionsDepartments">
+    <legend>@T("Department Information")</legend>
+    @Html.LabelFor(c => c.PositionsDepartments)
+    @Html.HiddenFor(c => c.PositionsDepartments, new { @data_bind = "value: postData" })
+    <select data-bind="options: departments, value: chosenDepartment, optionsText: 'name', optionsCaption: '@T("Choose...").Text'"></select>
+    <table style="width: 100%">
+        <tr>
+            <td class="col-5">&nbsp;</td>
+            <td class="col-5">@T("Selected")</td>
+        </tr>
+        <tr>
+            <td data-bind="foreach: chosenDepartment.safe().positions">
+                <p>
+                    <input type="checkbox" data-bind="checked: selected" />
+                    <span data-bind="text: positionName"></span>
+                </p>
+            </td>
+            <td data-bind="foreach: selectedDepartments()">
+                <ul id="selected-positions">
+                    <li><span data-bind="text: $index() + 1"></span>. <b data-bind="text: name"></b>
+                        <ul data-bind="foreach: positions">
+                            <li><span data-bind="text: $index() + 1"></span>. <span data-bind="text: positionName"></span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+
+</fieldset>
