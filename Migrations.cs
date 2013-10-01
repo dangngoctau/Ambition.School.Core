@@ -52,6 +52,7 @@ namespace Ambition.School.Core
                     .Column<DateTime>("Birthday")
                     .Column<string>("Address")
                     .Column<int>("UserId")
+                    .Column<string>("FullName")
                 );
 
             SchemaBuilder.CreateTable(typeof(TeacherPartRecord).Name,
@@ -89,10 +90,32 @@ namespace Ambition.School.Core
             return 1;
         }
 
-        public int UpdateFrom1()
+        public int UpdateFrom2()
         {
-            SchemaBuilder.AlterTable(typeof(MemberPartRecord).Name, command => command.AddColumn<string>("FullName"));
-            return 2;
+            SchemaBuilder.CreateTable(typeof(ArticleCategoryPartRecord).Name,
+                table => table
+                    .ContentPartRecord()
+                    .Column<string>("Name")
+                    .Column<string>("Code")
+                    .Column<string>("Parent_Id")
+                );
+
+            ContentDefinitionManager.AlterTypeDefinition(ContentTypes.ArticleCategory,
+                cfg => cfg
+                    .WithPart("CommonPart", p => p
+                        .WithSetting("DateEditorSettings.ShowDateEditor", "False")
+                        .WithSetting("OwnerEditorSettings.ShowOwnerEditor", "False"))
+                    .WithPart("AutoroutePart", builder => builder
+                        .WithSetting("AutorouteSettings.AllowCustomPattern", "true")
+                        .WithSetting("AutorouteSettings.AutomaticAdjustmentOnEdit", "false")
+                        .WithSetting("AutorouteSettings.PatternDefinitions", "[{Name:'Title', Pattern: '{Content.Slug}', Description: 'my-article-category'}]")
+                        .WithSetting("AutorouteSettings.DefaultPatternIndex", "0"))
+                    .WithPart("ArticleCategoryPart")
+                    .Creatable());
+
+            ContentDefinitionManager.AlterTypeDefinition(ContentTypes.Article, cfg => cfg.WithPart("ArticleCategoryPart"));
+            return 3;
         }
+
     }
 }

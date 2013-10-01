@@ -104,6 +104,8 @@
     <Compile Include="ContentTypes.cs" />
     <Compile Include="Controllers\DepartmentAdminController.cs" />
     <Compile Include="Controllers\MemberAdminController.cs" />
+    <Compile Include="Drivers\ArticleCategoryPartDriver.cs" />
+    <Compile Include="Drivers\ArticlePartDriver.cs" />
     <Compile Include="Drivers\ArticlePermissionPartDriver.cs" />
     <Compile Include="Drivers\MemberPartDriver.cs" />
     <Compile Include="Drivers\TeacherPartDriver.cs" />
@@ -124,10 +126,14 @@
     <Compile Include="Extensions\Html\ResolveLinksHelper.cs" />
     <Compile Include="Extensions\LocalizedDisplayNameAttribute.cs" />
     <Compile Include="Extensions\RouteDataExtensions.cs" />
+    <Compile Include="Handlers\ArticleCategoryPartHandler.cs" />
+    <Compile Include="Handlers\ArticlePartHandler.cs" />
     <Compile Include="Handlers\ArticlePermissionPartHandler.cs" />
     <Compile Include="Handlers\MemberPartHandler.cs" />
     <Compile Include="Handlers\TeacherPartHandler.cs" />
     <Compile Include="Migrations.cs" />
+    <Compile Include="Models\ArticleCategoryPartRecord.cs" />
+    <Compile Include="Models\ArticleCategoryPart.cs" />
     <Compile Include="Models\ArticlePart.cs" />
     <Compile Include="Models\ArticlePartRecord.cs" />
     <Compile Include="Models\ArticlePermissionPart.cs" />
